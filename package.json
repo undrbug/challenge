@@ -2,8 +2,10 @@
   "name": "chatbot-sushi",
   "version": "1.0.0",
   "description": "Challenge Desarrollador Junior de Chatbots IA - Back-end: Chatbot para pedir Sushi",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
