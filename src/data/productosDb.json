@@ -1,0 +1,102 @@
+[
+    {
+        "nombre": "Sushi Roll Clásico",
+        "descripcion": "Delicioso rollo de sushi con salmón, queso crema y palta.",
+        "precio": 1200,
+        "categoria": "Sushi",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/7california-roll-0734257547992402.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": false
+    },
+    {
+        "nombre": "Nigiri de Salmón",
+        "descripcion": "Nigiri de salmón fresco sobre una base de arroz.",
+        "precio": 800,
+        "categoria": "Sushi",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/08nigirisalmon-0272595965896079.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": false
+    },
+    {
+        "nombre": "Sashimi de Atún",
+        "descripcion": "Finas láminas de atún fresco servido con salsa de soya.",
+        "precio": 1500,
+        "categoria": "Sushi",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/04s0000atun-0571892017299259.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": false
+    },
+    {
+        "nombre": "Veggie Roll",
+        "descripcion": "Rollo de sushi vegano con zanahoria, pepino y palta.",
+        "precio": 1100,
+        "categoria": "Vegano",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/12camaron-0466346984946331.png",
+        "disponible": true,
+        "vegano": true,
+        "gluten": false
+    },
+    {
+        "nombre": "California Roll",
+        "descripcion": "Rollo de sushi con kanikama, palta y queso crema.",
+        "precio": 1300,
+        "categoria": "Sushi",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/imagen-combo-0767792892068528.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": false
+    },
+    {
+        "nombre": "Combo Sushi Party",
+        "descripcion": "40 piezas surtidas de sushi ideal para compartir.",
+        "precio": 5000,
+        "categoria": "Combos",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/00mixto-delgado-023152386594169.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": false
+    },
+    {
+        "nombre": "Tempura Roll",
+        "descripcion": "Rollo de sushi rebozado con camarón y queso crema.",
+        "precio": 1400,
+        "categoria": "Sushi",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/03tempuracamaron-0841925674975815.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": true
+    },
+    {
+        "nombre": "Edamame",
+        "descripcion": "Vainas de soja cocidas con sal marina.",
+        "precio": 500,
+        "categoria": "Entradas",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/chirashi-yuzu-0437850909045828.png",
+        "disponible": true,
+        "vegano": true,
+        "gluten": false
+    },
+    {
+        "nombre": "Gyozas de Cerdo",
+        "descripcion": "Empanadillas japonesas rellenas de cerdo y verduras.",
+        "precio": 1000,
+        "categoria": "Entradas",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/05chirashi-sake-0839179196785753.png",
+        "disponible": true,
+        "vegano": false,
+        "gluten": true
+    },
+    {
+        "nombre": "Miso Soup",
+        "descripcion": "Sopa japonesa tradicional con tofu y algas.",
+        "precio": 600,
+        "categoria": "Sopas",
+        "imagenUrl": "https://file.adomicil.io/sushiroll.adomicil.io/_files/images/product/03tempuracamaron-0841925674975815.png",
+        "disponible": true,
+        "vegano": true,
+        "gluten": false
+    }
+]

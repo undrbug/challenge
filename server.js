@@ -1,18 +1,18 @@
 import {config} from 'dotenv';
 config({ path: '.env.example' });
+import express from 'express';
+
+import productosRoute from './src/routes/productos.routes.js';
 
 import connectDB from './src/config/db.js';
 
+const app = express();
+
 connectDB();
 
-import express from 'express';
-
-const app = express();
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Bienvenido al Chatbot de Sushi');
-});
+app.use('/', productosRoute)
 
 const PORT = process.env.PORT || 5000;
 
