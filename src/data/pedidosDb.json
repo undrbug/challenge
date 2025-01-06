@@ -1,0 +1,200 @@
+[
+    {
+        "cliente": {
+            "nombre": "Juan Pérez",
+            "email": "juan.perez@example.com",
+            "telefono": "123456789"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b1",
+                "nombre": "Sushi Roll de Salmón",
+                "cantidad": 2,
+                "precioUnitario": 12.5
+            },
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b2",
+                "nombre": "Nigiri de Atún",
+                "cantidad": 4,
+                "precioUnitario": 3.75
+            }
+        ],
+        "total": 40,
+        "estado": "Pendiente",
+        "fecha": "2024-12-28T18:45:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "María Gómez",
+            "email": "maria.gomez@example.com",
+            "telefono": "987654321"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b3",
+                "nombre": "Temaki de Camarón",
+                "cantidad": 1,
+                "precioUnitario": 8.5
+            },
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b4",
+                "nombre": "Maki de Pepino",
+                "cantidad": 2,
+                "precioUnitario": 6
+            }
+        ],
+        "total": 20.5,
+        "estado": "Preparando",
+        "fecha": "2024-12-28T19:15:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Carlos López",
+            "email": "carlos.lopez@example.com",
+            "telefono": "1122334455"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b5",
+                "nombre": "Sashimi Mixto",
+                "cantidad": 3,
+                "precioUnitario": 15
+            }
+        ],
+        "total": 45,
+        "estado": "Entregado",
+        "fecha": "2024-12-27T20:30:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Ana Torres",
+            "email": "ana.torres@example.com",
+            "telefono": "5566778899"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b6",
+                "nombre": "California Roll",
+                "cantidad": 5,
+                "precioUnitario": 7.5
+            }
+        ],
+        "total": 37.5,
+        "estado": "Cancelado",
+        "fecha": "2024-12-26T12:00:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Lucas Martínez",
+            "email": "lucas.martinez@example.com",
+            "telefono": "2233445566"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b7",
+                "nombre": "Roll Vegano",
+                "cantidad": 3,
+                "precioUnitario": 9
+            },
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b8",
+                "nombre": "Edamame",
+                "cantidad": 1,
+                "precioUnitario": 5
+            }
+        ],
+        "total": 32,
+        "estado": "Pendiente",
+        "fecha": "2024-12-28T19:00:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Laura Fernández",
+            "email": "laura.fernandez@example.com",
+            "telefono": "6677889900"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256b9",
+                "nombre": "Hosomaki de Anguila",
+                "cantidad": 2,
+                "precioUnitario": 14
+            }
+        ],
+        "total": 28,
+        "estado": "Preparando",
+        "fecha": "2024-12-28T20:30:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Pedro García",
+            "email": "pedro.garcia@example.com",
+            "telefono": "1122113311"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256ba",
+                "nombre": "Uramaki de Cangrejo",
+                "cantidad": 4,
+                "precioUnitario": 11
+            }
+        ],
+        "total": 44,
+        "estado": "Entregado",
+        "fecha": "2024-12-27T21:00:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Sofía Ramírez",
+            "email": "sofia.ramirez@example.com",
+            "telefono": "3344556677"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256bb",
+                "nombre": "Sushi Mixto Grande",
+                "cantidad": 1,
+                "precioUnitario": 50
+            }
+        ],
+        "total": 50,
+        "estado": "Pendiente",
+        "fecha": "2024-12-28T19:45:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Matías Castillo",
+            "email": "matias.castillo@example.com",
+            "telefono": "7788990011"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256bc",
+                "nombre": "Roll Picante de Atún",
+                "cantidad": 3,
+                "precioUnitario": 12
+            }
+        ],
+        "total": 36,
+        "estado": "Cancelado",
+        "fecha": "2024-12-26T15:30:00Z"
+    },
+    {
+        "cliente": {
+            "nombre": "Valentina Ríos",
+            "email": "valentina.rios@example.com",
+            "telefono": "2233447788"
+        },
+        "productos": [
+            {
+                "productoId": "64ff97ecf5b394f9a0a256bd",
+                "nombre": "Nigiri de Salmón",
+                "cantidad": 6,
+                "precioUnitario": 4
+            }
+        ],
+        "total": 24,
+        "estado": "Preparando",
+        "fecha": "2024-12-28T18:30:00Z"
+    }
+]
