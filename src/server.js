@@ -3,16 +3,14 @@ config({ path: '.env.example' });
 import express from 'express';
 import cors from 'cors';
 import productosRoute from './routes/productos.routes.js';
-
-import connectDB from './config/db.js';
+import pedidosRoute from './routes/pedidos.routes.js';
 
 const app = express();
 
-connectDB();
-
 app.use(express.json());
 
-app.use('/', productosRoute)
+app.use('/pedido', pedidosRoute)
+app.use('/menu', productosRoute)
 
 const PORT = process.env.PORT || 5000;
 
