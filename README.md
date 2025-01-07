@@ -35,7 +35,9 @@ npm run dev
 
 El servidor se ejecutará en http://localhost:3000.
 
+
 Estructura del Proyecto:
+
 src: código fuente del proyecto.
 
 config/: Configuración de la base de datos (mongoDB).
