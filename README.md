@@ -35,11 +35,17 @@ npm run dev
 
 El servidor se ejecutará en http://localhost:3000.
 
-Estructura del Proyecto
-src: Contiene el código fuente del proyecto.
-config/: Configuración de la base de datos.
+Estructura del Proyecto:
+src: código fuente del proyecto.
+
+config/: Configuración de la base de datos (mongoDB).
+
 controllers/: Controladores de las rutas.
+
 data/: Archivos JSON con datos de ejemplo.
+
 models/: Modelos de Mongoose.
+
 routes/: Definición de las rutas.
+
 server.js: Archivo principal del servidor.
