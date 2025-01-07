@@ -2,9 +2,9 @@ import {config} from 'dotenv';
 config({ path: '.env.example' });
 import express from 'express';
 import cors from 'cors';
-import productosRoute from './src/routes/productos.routes.js';
+import productosRoute from './routes/productos.routes.js';
 
-import connectDB from './src/config/db.js';
+import connectDB from './config/db.js';
 
 const app = express();
 
