@@ -1,13 +1,25 @@
 import Producto from '../models/producto.js';
+import {connectDB, disconnectDB} from '../config/db.js';
 
 const productosController = {
     getMenu: async (req, res) => {
         try {
+            connectDB();
             const productos = await Producto.find({disponible: true});
-            res.json(productos);
+            res.status(200).json({
+                success: true,
+                count: productos.length,
+                data: productos,
+            });
         } catch (error) {
             console.log(error);
-            res.status(500).json({ error: 'Error al obtener el menú' });
+            res.status(500).json({
+                success: false,
+                error: "Error al obtener el menu, intente nuevamente.",
+            });
+        } finally {
+            console.log("Cerrando conexión a la base de datos.");
+            disconnectDB();
         }
     }
 }
