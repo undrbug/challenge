@@ -19,8 +19,8 @@ const pedidosController = {
                 (acc, item) => acc + item.precioUnitario * item.cantidad,
                 0
             );
-            connectDB();
             console.log('Conectado a la base de datos y creado el pedido');
+            connectDB();
             // Crear el pedido en la base de datos
             const nuevoPedido = new Pedido({
                 cliente,
@@ -48,6 +48,7 @@ const pedidosController = {
     },
     getPedidos: async (req, res) => {
         try {
+            console.log("conectandose a la base de datos y obteniendo los pedidos");
             connectDB();
             const pedidos = await Pedido.find();
             res.status(200).json({
