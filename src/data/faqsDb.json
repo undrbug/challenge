@@ -1,0 +1,82 @@
+[
+    {
+        "pregunta": "¿Cuál es el horario de atención?",
+        "respuesta": "Estamos abiertos todos los días de 12:00 PM a 10:00 PM."
+    },
+    {
+        "pregunta": "¿Ofrecen opciones veganas?",
+        "respuesta": "¡Sí! Contamos con varias opciones veganas en nuestro menú."
+    },
+    {
+        "pregunta": "¿El sushi es libre de gluten?",
+        "respuesta": "Algunos de nuestros platos son libres de gluten. Verifique en el menú."
+    },
+    {
+        "pregunta": "¿Puedo hacer un pedido personalizado?",
+        "respuesta": "¡Claro! Podemos ajustar algunos ingredientes según sus necesidades."
+    },
+    {
+        "pregunta": "¿Hacen entregas a domicilio?",
+        "respuesta": "Sí, ofrecemos servicio de entrega a domicilio en un radio de 10 km."
+    },
+    {
+        "pregunta": "¿Tienen promociones especiales?",
+        "respuesta": "Contamos con promociones diarias y descuentos los fines de semana."
+    },
+    {
+        "pregunta": "¿Aceptan tarjetas de crédito y débito?",
+        "respuesta": "Sí, aceptamos pagos con tarjetas de crédito, débito y efectivo."
+    },
+    {
+        "pregunta": "¿Cuánto tiempo tarda un pedido en llegar?",
+        "respuesta": "El tiempo estimado es de 30-45 minutos dependiendo de la ubicación."
+    },
+    {
+        "pregunta": "¿Tienen un menú infantil?",
+        "respuesta": "Sí, ofrecemos opciones más pequeñas y suaves para los niños."
+    },
+    {
+        "pregunta": "¿Ofrecen catering para eventos?",
+        "respuesta": "Sí, podemos preparar sushi para eventos. Contáctenos para más detalles."
+    },
+    {
+        "pregunta": "¿Los productos son frescos?",
+        "respuesta": "Sí, utilizamos ingredientes frescos y de alta calidad todos los días."
+    },
+    {
+        "pregunta": "¿Se puede reservar una mesa?",
+        "respuesta": "Aceptamos reservas para grupos de hasta 10 personas."
+    },
+    {
+        "pregunta": "¿Hay opciones sin pescado?",
+        "respuesta": "Sí, contamos con opciones de sushi vegetariano y otros platillos sin pescado."
+    },
+    {
+        "pregunta": "¿Qué incluyen los combos familiares?",
+        "respuesta": "Nuestros combos familiares incluyen una variedad de rolls, bebidas y entradas."
+    },
+    {
+        "pregunta": "¿El menú incluye bebidas?",
+        "respuesta": "Las bebidas no están incluidas, pero ofrecemos una amplia selección de ellas."
+    },
+    {
+        "pregunta": "¿Ofrecen algún tipo de membresía o puntos?",
+        "respuesta": "¡Sí! Tenemos un programa de puntos para clientes frecuentes."
+    },
+    {
+        "pregunta": "¿Qué hago si tengo una alergia alimentaria?",
+        "respuesta": "Por favor, indíquenos su alergia al hacer su pedido y ajustaremos los ingredientes."
+    },
+    {
+        "pregunta": "¿Los precios del menú incluyen impuestos?",
+        "respuesta": "Sí, todos los precios incluyen impuestos."
+    },
+    {
+        "pregunta": "¿Puedo recoger mi pedido en el restaurante?",
+        "respuesta": "Sí, ofrecemos la opción de recogida en el restaurante."
+    },
+    {
+        "pregunta": "¿Cuál es su política de cancelaciones?",
+        "respuesta": "Las cancelaciones deben realizarse con al menos 15 minutos de anticipación."
+    }
+]

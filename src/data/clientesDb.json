@@ -1,0 +1,166 @@
+[
+    {
+        "nombre": "Juan Pérez",
+        "email": "juan.perez@example.com",
+        "telefono": "123456789",
+        "direccion": {
+            "calle": "Avenida Siempre Viva",
+            "numero": "742",
+            "ciudad": "Springfield",
+            "provincia": "Buenos Aires",
+            "codigoPostal": "1001"
+        },
+        "historialPedidos": [
+            {
+                "pedidoId": "64ff97ecf5b394f9a0a256a1",
+                "fecha": "2024-12-01T15:45:00Z"
+            }
+        ],
+        "fechaRegistro": "2024-12-20T08:30:00Z"
+    },
+    {
+        "nombre": "María Gómez",
+        "email": "maria.gomez@example.com",
+        "telefono": "987654321",
+        "direccion": {
+            "calle": "Calle de las Flores",
+            "numero": "45",
+            "ciudad": "Córdoba",
+            "provincia": "Córdoba",
+            "codigoPostal": "5000"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-21T09:15:00Z"
+    },
+    {
+        "nombre": "Carlos López",
+        "email": "carlos.lopez@example.com",
+        "telefono": "1122334455",
+        "direccion": {
+            "calle": "Pasaje del Sol",
+            "numero": "123",
+            "ciudad": "Rosario",
+            "provincia": "Santa Fe",
+            "codigoPostal": "2000"
+        },
+        "historialPedidos": [
+            {
+                "pedidoId": "64ff97ecf5b394f9a0a256a2",
+                "fecha": "2024-12-18T18:00:00Z"
+            },
+            {
+                "pedidoId": "64ff97ecf5b394f9a0a256a3",
+                "fecha": "2024-12-19T20:30:00Z"
+            }
+        ],
+        "fechaRegistro": "2024-12-19T08:00:00Z"
+    },
+    {
+        "nombre": "Ana Torres",
+        "email": "ana.torres@example.com",
+        "telefono": "5566778899",
+        "direccion": {
+            "calle": "Calle Principal",
+            "numero": "678",
+            "ciudad": "La Plata",
+            "provincia": "Buenos Aires",
+            "codigoPostal": "1900"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-10T11:30:00Z"
+    },
+    {
+        "nombre": "Lucas Martínez",
+        "email": "lucas.martinez@example.com",
+        "telefono": "2233445566",
+        "direccion": {
+            "calle": "Avenida del Libertador",
+            "numero": "999",
+            "ciudad": "Mendoza",
+            "provincia": "Mendoza",
+            "codigoPostal": "5500"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-18T14:45:00Z"
+    },
+    {
+        "nombre": "Laura Fernández",
+        "email": "laura.fernandez@example.com",
+        "telefono": "6677889900",
+        "direccion": {
+            "calle": "Calle 8",
+            "numero": "56",
+            "ciudad": "Mar del Plata",
+            "provincia": "Buenos Aires",
+            "codigoPostal": "7600"
+        },
+        "historialPedidos": [
+            {
+                "pedidoId": "64ff97ecf5b394f9a0a256a4",
+                "fecha": "2024-12-15T13:30:00Z"
+            }
+        ],
+        "fechaRegistro": "2024-12-15T08:00:00Z"
+    },
+    {
+        "nombre": "Pedro García",
+        "email": "pedro.garcia@example.com",
+        "telefono": "1122113311",
+        "direccion": {
+            "calle": "Avenida del Trabajo",
+            "numero": "22",
+            "ciudad": "San Miguel de Tucumán",
+            "provincia": "Tucumán",
+            "codigoPostal": "4000"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-05T09:00:00Z"
+    },
+    {
+        "nombre": "Sofía Ramírez",
+        "email": "sofia.ramirez@example.com",
+        "telefono": "3344556677",
+        "direccion": {
+            "calle": "Camino Real",
+            "numero": "1234",
+            "ciudad": "San Juan",
+            "provincia": "San Juan",
+            "codigoPostal": "5400"
+        },
+        "historialPedidos": [
+            {
+                "pedidoId": "64ff97ecf5b394f9a0a256a5",
+                "fecha": "2024-12-22T19:00:00Z"
+            }
+        ],
+        "fechaRegistro": "2024-12-21T09:00:00Z"
+    },
+    {
+        "nombre": "Matías Castillo",
+        "email": "matias.castillo@example.com",
+        "telefono": "7788990011",
+        "direccion": {
+            "calle": "Boulevard Oroño",
+            "numero": "444",
+            "ciudad": "Rosario",
+            "provincia": "Santa Fe",
+            "codigoPostal": "2000"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-20T10:30:00Z"
+    },
+    {
+        "nombre": "Valentina Ríos",
+        "email": "valentina.rios@example.com",
+        "telefono": "2233447788",
+        "direccion": {
+            "calle": "Callejón Estrella",
+            "numero": "11",
+            "ciudad": "Neuquén",
+            "provincia": "Neuquén",
+            "codigoPostal": "8300"
+        },
+        "historialPedidos": [],
+        "fechaRegistro": "2024-12-15T12:45:00Z"
+    }
+]
