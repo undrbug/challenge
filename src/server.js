@@ -12,10 +12,10 @@ import chatBotRoute from "./routes/chatbot.routes.js";
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 //se podría mejorar!
 app.use("/", indexRoutes);
-
 app.use("/pedido", pedidosRoute);
 app.use("/menu", productosRoute);
 app.use("/faq", faqsIndex);

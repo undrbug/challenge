@@ -1,110 +1,174 @@
 import Faq from "../models/faq.js";
 import Producto from "../models/producto.js";
+import Pedido from "../models/pedido.js";
+import Cliente from "../models/cliente.js";
 import { connectDB, disconnectDB } from "../config/db.js";
+import { parseProductos } from "../utils/parsers.js";
 
-const mostrarMenu = ["mostrar menu", "mostrar menú", "ver menú", "ver menu", "tengo hambre", "que hay para comer", "que hay para cenar", "que hay para almorzar", "que hay para merendar", "que hay para merendar", "no quiero cocinar", "menu"];
-
-const estanAbiertos = ["estan abiertos", "a que hora abren", "horarios de apertura", "cuando abren", "estan cerrados", "a que hora cierran", "horas de operacion", "abren hoy", "horas de servicio", "horarios"];
+const comandos = {
+	mostrarMenu: [
+		"mostrar menu",
+		"mostrar menú",
+		"ver menú",
+		"ver menu",
+		"tengo hambre",
+		"que hay para comer",
+		"que hay para cenar",
+		"que hay para almorzar",
+		"que hay para merendar",
+		"que hay para merendar",
+		"no quiero cocinar",
+		"menu",
+	],
+	estanAbiertos: [
+		"estan abiertos",
+		"a que hora abren",
+		"horarios de apertura",
+		"cuando abren",
+		"estan cerrados",
+		"a que hora cierran",
+		"horas de operacion",
+		"abren hoy",
+		"horas de servicio",
+		"horarios",
+	],
+	hacerPedido: [
+		"hacer pedido",
+		"quiero hacer el pedido",
+		"quiero pedir",
+		"quiero ordenar",
+		"quiero comprar",
+		"quiero comer",
+		"quiero cenar",
+		"quiero almorzar",
+		"quiero merendar",
+	],
+};
 
 const chatBotController = {
-    //Primer intento, no me convence.
-    processMessage0: async (req, res) => {
-        const { message } = req.body;
-        const mensaje = message.toLowerCase();
-        const mensajeSinEspacios = mensaje.replace(/\s+/g, '');
-        console.log(mensaje);
-        if (!mensaje) {
-            return res.status(400).json({
-                success: false,
-                error: "Debe proporcionar un mensaje.",
-            });
-        }
-        try {
-            console.log("Conectando a la base de datos y procesando el mensaje");
-            connectDB();
-            const responseMessage = await Faq.find({ pregunta: mensaje });
-            if (!responseMessage) {
-                return res.status(404).json({
-                    success: false,
-                    error: "No se encontro una respuesta para el mensaje proporcionado.",
-                });
-            }
-            res.status(200).json({
-                success: true,
-                response: responseMessage.length > 0 ? responseMessage[0].respuesta : "No se encontró una respuesta para el mensaje proporcionado.",
-            });
-        } catch (error) {
-            console.log(error);
-            res.status(500).json({
-                success: false,
-                error: "Error al procesar el mensaje, intente nuevamente.",
-            });
-        } finally {
-            console.log("Cerrando conexión a la base de datos.");
-            disconnectDB();
-        }
-    },
-    //Segundo intento.
-    processMessage1: async (req, res) => {
-        const { message } = req.body;
-    
-        if (!message) {
-            return res.status(400).json({
-                success: false,
-                message: "El mensaje es requerido.",
-            });
-        }
-    
-        try {
-            let responseText;
-            connectDB();
-            // if (message.toLowerCase().includes("mostrar menu")) {
-            if (mostrarMenu.some(keys => message.toLowerCase().includes(keys))) {
-                //Buscamos productos o menu de la bd
-                const productos = await Producto.find();
-                if (productos.length === 0) {
-                    responseText = "El menú está vacío por ahora.";
-                } else {
-                    responseText = `Mirá, acá está el menú: \ `;
-                    productos.forEach((producto, index) => {
-                        responseText += `${index + 1}. ${producto.nombre} - ${producto.precio}`;
-                    });
-                }
-            } else if (estanAbiertos.some(keys => message.toLowerCase().includes(keys))) {
-                // miramos la hora actual y respondemos si estamos abiertos o no
-                const currentHour = new Date().getHours();
-                if (currentHour >= 11 && currentHour <= 23) {
-                    responseText = "¡Sí, estamos abiertos! Nuestro horario es de 11hs a 23hs.";
-                } else {
-                    responseText = "Lo siento, estamos cerrados. Nuestro horario es de 11hs a 23hs.";
-                }
-            } else {
-                responseText = "Lo siento, no entiendo ese comando. Prueba con 'mostrar menú'.";
-                const faqs = await Faq.find();
-                const faqResponse = faqs.find((faq) => message.toLowerCase().includes(faq.pregunta));
-                if (faqResponse) {
-                    responseText = faqResponse ? faqResponse : "Lo siento, pero no tenemos respuesta a tu pregunta.";
-                }
-                res.status(200).json({
-                    success: "nderacore",
-                    message: faqResponse,
-                });
-            }
-            // res.status(200).json({
-            //     success: true,
-            //     message: responseText,
-            // });
-        } catch (error) {
-            console.error("Error en el chatbot:", error.message);
-            res.status(500).json({
-                success: false,
-                message: "Hubo un problema al procesar el mensaje.",
-            });
-        } finally {
-            console.log("Cerrando conexión a la base de datos.");
-            // disconnectDB();
-        }
-    }
-}
+	processMessage: async (req, res) => {
+		const { message } = req.body;
+		if (!message) {
+			return res.status(400).json({
+				success: false,
+				message: "El mensaje es requerido.",
+			});
+		}
+
+		try {
+			let responseText =
+				"No entiendo el mensaje. Prueba con: 'mostrar menú', 'hacer pedido' o '¿están abiertos?'";
+			await connectDB();
+
+			const lowerMessage = message.toLowerCase();
+
+			//mostrar menu
+			if (
+				comandos.mostrarMenu.some((cmd) => lowerMessage.includes(cmd))
+			) {
+				const productos = await Producto.find({ disponible: true });
+				responseText = productos.length
+					? productos
+							.map(
+								(p, i) => `${i + 1}. ${p.nombre} - $${p.precio}`
+							)
+							.join("\n")
+					: "El menú está vacío por ahora.";
+			}
+			//verificamos los horaios
+			else if (
+				comandos.estanAbiertos.some((cmd) => lowerMessage.includes(cmd))
+			) {
+				const currentHour = new Date().getHours();
+				responseText =
+					currentHour >= 11 && currentHour <= 23
+						? "¡Sí, estamos abiertos! Nuestro horario es de 11hs a 23hs."
+						: "Lo siento, estamos cerrados. Nuestro horario es de 11hs a 23hs.";
+			}
+			//realizar pedido
+			else if (
+				comandos.hacerPedido.some((cmd) => lowerMessage.includes(cmd))
+			) {
+				// Paso inicial para realizar un pedido
+				//elimino el cmd del mensaje
+				const pedido = message.split("\n").slice(1);
+				//convierto el pedido en un array
+				const productosArray = pedido.join(",").split(",");
+				//creo un objeto con el pedido
+
+				if (productosArray.length === 0) {
+					responseText =
+						"Por favor, especifica los productos y cantidades en el formato 'Producto: Cantidad'.";
+				} else {
+					// Preparar el pedido
+					const productoObj = productosArray.map((p) => {
+						const producto = p.trim();
+						const [nombre, cantidad] = p.split(":");
+						const productoObj = {
+							nombre: nombre.trim(),
+							cantidad: parseInt(cantidad),
+						};
+						return productoObj;
+					});
+					console.log("producto dentro del map", productoObj);
+					// Validar productos
+					const nombresProductos = productoObj.map((p) => p.nombre);
+					const productosEncontrados = await Producto.find({
+						nombre: {
+							$in: nombresProductos.map(
+								(n) => new RegExp(`^${n}$`, "i")
+							),
+						},
+						disponible: true,
+					});
+
+					if (productosEncontrados.length !== productoObj.length) {
+						responseText =
+							"Algunos productos no están disponibles en el menú. Verifica los nombres.";
+					} else {
+						// Calcular el total y registrar el pedido
+						const total = productoObj.reduce((sum, p) => {
+							const producto = productosEncontrados.find(
+								(prod) => prod.nombre === p.nombre
+							);
+							return sum + producto.precio * p.cantidad;
+						}, 0);
+
+						// Simulación de cliente (en producción) con id 677b4bde1d179af5351af73a
+						const cliente = await Cliente.findById(
+							"677d91ad1d179af5351af749"
+						);
+                        console.log(cliente);
+						if (!cliente) {
+							responseText =
+								"No se encontró un cliente para registrar el pedido.";
+						} else {
+							const nuevoPedido = new Pedido({
+								cliente: cliente._id,
+								productos: productoObj,
+								total,
+							});
+
+							await nuevoPedido.save();
+							responseText = `Pedido registrado con éxito. Total a pagar: $${total.toFixed(
+								2
+							)}.`;
+						}
+					}
+				}
+			}
+
+			res.status(200).json({ success: true, message: responseText });
+		} catch (error) {
+			console.error("Error en el chatbot:", error.message);
+			res.status(500).json({
+				success: false,
+				message: "Hubo un problema al procesar el mensaje.",
+			});
+		} finally {
+			await disconnectDB();
+		}
+	},
+};
 
 export default chatBotController;

@@ -3,7 +3,7 @@ import pedidosController from "../controllers/pedidos.controllers.js";
 
 const router = express.Router();
 
-router.post("/", pedidosController.putPedido);
+router.post("/", pedidosController.crearPedido);
 
 router.get('/lista', pedidosController.getPedidos);
 

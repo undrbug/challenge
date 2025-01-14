@@ -4,7 +4,8 @@ import {connectDB, disconnectDB} from '../config/db.js';
 const productosController = {
     getMenu: async (req, res) => {
         try {
-            connectDB();
+            await connectDB();
+            //Filtramos los productos disponibles
             const productos = await Producto.find({disponible: true});
             res.status(200).json({
                 success: true,
@@ -19,7 +20,7 @@ const productosController = {
             });
         } finally {
             console.log("Cerrando conexión a la base de datos.");
-            disconnectDB();
+            await disconnectDB();
         }
     }
 }
